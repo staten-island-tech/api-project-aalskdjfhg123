@@ -1,4 +1,4 @@
-import './style.css'
+import '../styles/style.css'
 
 const input = document.querySelector('.input')
 
@@ -12,21 +12,21 @@ async function getNeko() {
         }
     const json = await response.json()
     const artist = json.results[0].artist_href
-    document.querySelector('h1').insertAdjacentHTML('beforeend',
+    document.querySelector('.container').insertAdjacentHTML('beforeend',
         `<img src="${json.results[0].url}" class="img" alt=""> <p><a href="${artist}">artist:${artist}</a></p>
         <img src="https://c.tenor.com/sWQu_pBYT1kAAAAi/pointing-wojak.gif" class="point" alt="">
 `)
     } 
     
     catch (error) {
-        document.querySelector('h1').textContent = error
+        document.querySelector('.container').textContent = error
     }
 
     
 }
 
 document.querySelector(".b").addEventListener("click", function () {
-    document.querySelector('h1').innerHTML = ""
+    document.querySelector('.container').innerHTML = ""
     getNeko()
     
 })

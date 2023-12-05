@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+  margin: auto;
+  padding-left: 15vw;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 85vw;
+  background-color: red;
+}

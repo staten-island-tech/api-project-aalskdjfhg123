@@ -31,4 +31,11 @@ document.querySelector(".b").addEventListener("click", function () {
     
 })
 
+
+document.querySelector(".c").addEventListener("click",function(){
+    document.querySelector("body").innerHTML = "";
+    document.querySelector("body").classList.add("cringe");
+    document.querySelector("body").innerHTML("heloo");
+})
+
 // https://nekos.best/api/v2/neko/XXXXXX-XXXXX.png

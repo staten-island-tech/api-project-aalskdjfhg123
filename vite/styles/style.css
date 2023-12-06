@@ -1,7 +1,10 @@
 @import url(flex.css);
 
 
-
+.cringe{
+    background-color: red;
+    
+}
 
 .img{
     width: 20vw;

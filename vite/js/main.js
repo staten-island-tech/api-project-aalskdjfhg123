@@ -1,6 +1,18 @@
 import '../styles/style.css'
 
-const input = document.querySelector('.input')
+async function getNeko() {
+    const response = await fetch('https://nekos.best/api/v2/neko')
+    const json = await response.json()
+    console.log(json.results[0].url)
+}
+
+await getNeko()
+
+// https://nekos.best/api/v2/neko/XXXXXX-XXXXX.png
+
+
+
+/* const input = document.querySelector('.input')
 
 
 
@@ -37,5 +49,7 @@ document.querySelector(".c").addEventListener("click",function(){
     document.querySelector("body").classList.add("cringe");
     document.querySelector("body").innerHTML("heloo");
 })
+ */
+
 
 // https://nekos.best/api/v2/neko/XXXXXX-XXXXX.png

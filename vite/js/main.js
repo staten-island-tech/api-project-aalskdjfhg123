@@ -8,11 +8,10 @@ async function getNeko() {
 
 await getNeko()
 
-// https://nekos.best/api/v2/neko/XXXXXX-XXXXX.png
 
 
 
-/* const input = document.querySelector('.input')
+ const input = document.querySelector('.input')
 
 
 
@@ -49,7 +48,7 @@ document.querySelector(".c").addEventListener("click",function(){
     document.querySelector("body").classList.add("cringe");
     document.querySelector("body").innerHTML("heloo");
 })
- */
+ 
 
 
 // https://nekos.best/api/v2/neko/XXXXXX-XXXXX.png

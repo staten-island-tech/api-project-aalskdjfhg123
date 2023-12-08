@@ -1,16 +1,11 @@
 import '../styles/style.css'
-import { dom } from '../../vite/js/dom'
+import { dom } from './dom'
+import { holidayTF } from './holidayTF'
 
-const url = `https://www.gov.uk/bank-holidays.json`
 
 
-async function getDays(url){
-const slop = await fetch(url);
-const json = await slop.json();
 
-console.log(json.scotland.events);
-json.scotland.forEach((thing)=>console.log(thing))
-}
+
 dom.b.addEventListener("click",function(){
-    getDays(url)
+    holidayTF()
 })

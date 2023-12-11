@@ -5,12 +5,11 @@ export async function holidayTF() {
         if (slop.status = 204) {
             throw new Error(slop.statusText)
         } else {
-            console.log("yes")
-        }
+            document.querySelector("h1").innerHTML = "yes"}
 
 
     } catch (error) {
-        console.log("no")
+        document.querySelector("h1").innerHTML = "no"
     }
 
 }

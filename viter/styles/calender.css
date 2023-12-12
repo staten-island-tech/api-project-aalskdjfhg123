@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    background-color: red;
+    width: 45vw;
+    height: 80vh;
+    margin: auto;
+}
+
+.calenderHead{
+    font-size: 5rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.calenderNav{
+    font-size: 3rem;
+    margin-top: 11%;
+    margin-left: 35%;
+}

@@ -4,7 +4,12 @@ import { holidayTF } from './holidayTF'
 import { nextHolidays } from './nextholidays'
 import { holidayWw } from './nextholidaysWw'
 
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth();
 
+let dayone = new Date(year, month, 1).getDay();
+console.log(dayone)
 
 dom.b.addEventListener("click",function(){
     holidayTF()
@@ -17,6 +22,6 @@ dom.w.addEventListener("click", function(){
     holidayWw()
 })
 
-const date = new Date();
+/* const date = new Date();
 const today = date.getMonth()
-console.log(today+1)
+console.log(today+1) */

@@ -27,6 +27,7 @@
 .monthyear {
     font-size: 2rem;
     font-weight: 550;
+    margin-left: -1.45rem;
 }
 
 .navigation span {

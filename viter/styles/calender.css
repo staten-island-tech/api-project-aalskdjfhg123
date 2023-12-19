@@ -1,19 +1,95 @@
-.container{
+.container {
+    align-items: center;
+    justify-content: center;
     display: flex;
-    background-color: red;
-    width: 45vw;
-    height: 80vh;
+    background-color: gray;
+    height: 70rem;
+    width: 70rem;
     margin: auto;
+    margin-top: 15vh;
 }
 
-.calenderHead{
-    font-size: 5rem;
-    margin-left: 3rem;
+.calender {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.calenderHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+}
+
+.monthyear {
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.navigation span {
+    margin: 0px 1px;
+    padding: .333rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.navigation span:hover {
+    background-color: red;
+
+}
+
+ul {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    width: calc(100%/7);
+    position: relative;
+}
+
+.weeks {
+    font-weight: 550;
+}
+
+.dates {
+    margin-bottom: 1rem;
+}
+
+.dates li {
     margin-top: 3rem;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.calenderNav{
-    font-size: 3rem;
-    margin-top: 11%;
-    margin-left: 35%;
+ .dates li::before{
+    position: absolute;
+    content: "";
+    height: 4rem;
+    width: 4rem;
+    top: 50%;
+    left: 50%;
+    border-radius: 1.2rem;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+.dates li:hover::before{
+    background-color: gray;
+
+}
+.inactive{
+    color: blue;
+}
+
+.dates li.active::before{
+    background-color: purple;
 }

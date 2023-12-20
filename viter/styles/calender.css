@@ -2,17 +2,15 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: gray;
-    height: 70rem;
-    width: 70rem;
     margin: auto;
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 
 .calender {
-    background-color: white;
+    background-color: #f4f4ff;
     padding: 1.5rem;
     border-radius: 1rem;
+    width: 30%;
 }
 
 .calenderHead {
@@ -84,11 +82,11 @@ li {
 }
 
 .dates li:hover::before{
-    background-color: gray;
+    background-color: red;
 
 }
 .inactive{
-    color: blue;
+    color: gray;
 }
 
 .dates li.active::before{

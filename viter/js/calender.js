@@ -1,5 +1,7 @@
 import { dom } from "./dom";
 import { months } from "./months";
+import { nextHolidays } from "./nextholidays";
+
 
 
 let currentDate = new Date();
@@ -8,8 +10,17 @@ let currentYear = currentDate.getFullYear();
 
 let currentMonth = currentDate.getMonth();
 
-export function makeCalender() {
-    dom.dates.innerHTML = ""
+let input = document.querySelector('.input')
+
+
+
+    
+
+export async function makeCalender() {
+    const slop = await fetch(`https://date.nager.at/api/v3/NextPublicHolidays/${input.value}`)
+    const data = await slop.json()
+
+   dom.dates.innerHTML = ""
     let dayOne = new Date(currentYear, currentMonth, 1).getDay();
     //first day of the month
     let dayEnd = new Date(currentYear, currentMonth + 1, 0).getDay();
@@ -28,12 +39,19 @@ export function makeCalender() {
 
     for (let i = 1; i <= dateEnd; i++) {
         let today = "";
+        let isHoliday = "";
         if (i === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear()) {
             today = "active"
         }
-        dom.dates.innerHTML += `<li class="${today}">${i}</li>`
+        if( `${currentYear}-${currentMonth+1}-${i}` === data[0].date){
+            isHoliday ="yes"
+        }
 
+        
+       
+        dom.dates.innerHTML += `<li class="${today}" id="${isHoliday}">${i}</li>`
     }
+    console.log(data)
 
     for (let i = 1; i <= 6 - dayEnd; i++) {
         dom.dates.innerHTML += `<li class="inactive">${i}</li>`

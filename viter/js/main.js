@@ -1,17 +1,14 @@
 import '../styles/style.css'
 import { dom } from './dom'
-import { holidayTF } from './holidayTF'
-import { nextHolidays } from './nextholidays'
 import { holidayWw } from './nextholidaysWw'
  import { makeCalender, navigation  } from './calender' 
 
 
 navigation()
-makeCalender()
-
 
 dom.b.addEventListener("click", function () {
-    holidayTF()
+console.log(dom.input.value)
+makeCalender()
 })
 dom.n.addEventListener("click", function () {
     nextHolidays()

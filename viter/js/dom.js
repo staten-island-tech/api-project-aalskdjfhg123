@@ -6,5 +6,6 @@ w: document.querySelector(".w"),
 calender: document.querySelector(".calender"),
 monthYear: document.querySelector(".monthyear"),
 dates: document.querySelector(".dates"),
-buttons: document.querySelectorAll(".navigation span")
+buttons: document.querySelectorAll(".navigation span"),
+input: document.querySelector(".input"),
 }

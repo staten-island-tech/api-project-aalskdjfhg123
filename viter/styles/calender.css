@@ -92,3 +92,8 @@ li {
 .dates li.active::before{
     background-color: purple;
 }
+
+#yes:hover::before{
+    background-color: blue;
+}
+

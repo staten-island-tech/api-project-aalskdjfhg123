@@ -8,4 +8,7 @@ monthYear: document.querySelector(".monthyear"),
 dates: document.querySelector(".dates"),
 buttons: document.querySelectorAll(".navigation span"),
 input: document.querySelector(".input"),
+cardTitleL: document.querySelector(".card-title"),
+cardTitleT: document.querySelector(".card-back"),
+desc: document.querySelector(".card-descriptionB")
 }

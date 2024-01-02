@@ -10,52 +10,82 @@ let currentYear = currentDate.getFullYear();
 
 let currentMonth = currentDate.getMonth();
 
-let input = document.querySelector('.input')
+//date getting
 
+
+let input = document.querySelector('.input')
 
 
     
 
 export async function makeCalender() {
+try {
     const slop = await fetch(`https://date.nager.at/api/v3/NextPublicHolidays/${input.value}`)
-    const data = await slop.json()
+    if(slop.status != 200){
+        throw new Error(response.statusText)
+    }  //get the api data
 
-   dom.dates.innerHTML = ""
-    let dayOne = new Date(currentYear, currentMonth, 1).getDay();
-    //first day of the month
-    let dayEnd = new Date(currentYear, currentMonth + 1, 0).getDay();
-    //last day of the month
-    let dateEndlast = new Date(currentYear, currentMonth, 0).getDate();
-    //last date of previous month
-    let dateEnd = new Date(currentYear, currentMonth + 1, 0).getDate();
-    //last date of the month
-    dom.monthYear.innerHTML = `${months[currentMonth]}  ${currentYear}`
-    //makes the thing at the top display the correct month and year
+    const data = await slop.json() 
 
-    for (let i = dayOne; i > 0; i--) {
-        dom.dates.innerHTML += `<li class="inactive">${dateEndlast - i + 1}</li>`
-    }
+    dom.dates.innerHTML = ""
+     let dayOne = new Date(currentYear, currentMonth, 1).getDay();
+     //first day of the month
+     let dayEnd = new Date(currentYear, currentMonth + 1, 0).getDay();
+     //last day of the month
+     let dateEndlast = new Date(currentYear, currentMonth, 0).getDate();
+     //last date of previous month
+     let dateEnd = new Date(currentYear, currentMonth + 1, 0).getDate();
+     //last date of the month
+     dom.monthYear.innerHTML = `${months[currentMonth]}  ${currentYear}`
+     //makes the thing at the top display the correct month and year
+ 
+     for (let i = dayOne; i > 0; i--) {
+         dom.dates.innerHTML += `<li class="inactive">${dateEndlast - i + 1}</li>`
+     } //adds the dates
+ 
+ 
+     for (let i = 1; i <= dateEnd; i++) {
+         let today = ""; //makes current date highlighted
+         let isHoliday = ""; //makes nearest holiday highlighted
 
-
-    for (let i = 1; i <= dateEnd; i++) {
-        let today = "";
-        let isHoliday = "";
-        if (i === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear()) {
-            today = "active"
-        }
-        if( `${currentYear}-${currentMonth+1}-${i}` === data[0].date){
-            isHoliday ="yes"
-        }
-
+         if (i === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear()) {
+             today = "active"
+         } //makes current date highlighted
+         if( `${currentYear}-${currentMonth+1}-${i}` === data[0].date){
+             isHoliday ="yes"
+         }else if(`${currentYear}-0${currentMonth+1}-${i}` === data[0].date ){
+            isHoliday = "yes"
+         }else if(`${currentYear}-0${currentMonth+1}-0${i}` === data[0].date ){
+            isHoliday = "yes" //if the holiday is on a single digit number
+         }else if(`${currentYear-1}-0${currentMonth+1}-0${i}` === data[0].date ){
+            isHoliday = "yes" //accounts for changing years in calendder
+         }  //all these else if statements are bc of the way date spits out the dates, it spits out "month number" instead of 0"month number" eg. 6 instead of 06 and the api has the data in the second format
+         //probably definately super inefficient way of doing it
         
-       
-        dom.dates.innerHTML += `<li class="${today}" id="${isHoliday}">${i}</li>`
-    }
-    console.log(data)
+         dom.dates.innerHTML += `<li class="${today}" id="${isHoliday}">${i}</li>`
+     }
+     console.log(data)
+ 
+     for (let i = 1; i <= 6 - dayEnd; i++) {
+        let isHoliday = "";
 
-    for (let i = 1; i <= 6 - dayEnd; i++) {
-        dom.dates.innerHTML += `<li class="inactive">${i}</li>`
-    }
+       if (`${currentYear}-${currentMonth+2}-0${i}` === data[0].date){
+        isHoliday = "yes" //if current month is jan-nov
+       }else if(`${currentYear+1}-0${currentMonth-10}-0${i}` === data[0].date){
+        isHoliday = "yes" //if current month is dec
+       } //checks holidays for next month
+
+         dom.dates.innerHTML += `<li class="inactive" id="${isHoliday}">${i}</li>`
+         
+     }
+
+
+} catch (error) {
+    document.querySelector("h1").textContent = "bad code idiot"
+}
+
+   
+ 
 }
 
 export function navigation() {

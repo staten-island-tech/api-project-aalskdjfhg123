@@ -1,16 +1,13 @@
-.container {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin: auto;
-    margin-top: 10vh;
-}
+
 
 .calender {
     background-color: #f4f4ff;
     padding: 1.5rem;
     border-radius: 1rem;
     width: 30%;
+    position: absolute;
+    top: 12vh;
+    left: 20vw;
 }
 
 .calenderHead {
@@ -93,7 +90,10 @@ li {
     background-color: purple;
 }
 
-#yes:hover::before{
+#yes::before{
     background-color: blue;
 }
 
+#yes{
+    color: black;
+}

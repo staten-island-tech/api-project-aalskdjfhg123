@@ -1,13 +1,14 @@
 
 
 .calender {
-    background-color: #f4f4ff;
+    background-color: #0C0A20;
     padding: 1.5rem;
-    border-radius: 1rem;
+    border-radius: .75rem;
     width: 30%;
     position: absolute;
     top: 12vh;
     left: 20vw;
+
 }
 
 .calenderHead {
@@ -17,6 +18,12 @@
     padding: 3rem;
     padding-top: 0rem;
     padding-bottom: 1rem;
+    color: #EFEFF0;
+
+}
+
+.calenderBody{
+    color: #EFEFF0;
 }
 
 .monthyear {
@@ -34,7 +41,7 @@
 }
 
 .navigation span:hover {
-    background-color: red;
+    background-color: #373737;
 
 }
 
@@ -69,29 +76,33 @@ li {
  .dates li::before{
     position: absolute;
     content: "";
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     top: 50%;
     left: 50%;
     border-radius: 1.2rem;
     transform: translate(-50%,-50%);
     z-index: -1;
+    
 }
 
 .dates li:hover::before{
-    background-color: red;
+    background-color: #373737;
 
 }
 .inactive{
-    color: gray;
+    color: #7F7F84;
 }
 
 .dates li.active::before{
-    background-color: purple;
+    background-color: #40BDFF;
+}
+.active{
+    color: black;
 }
 
 #yes::before{
-    background-color: blue;
+    background-color: #40BDFF;
 }
 
 #yes{

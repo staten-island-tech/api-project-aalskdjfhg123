@@ -11,5 +11,4 @@ export async function card() {
     if(data[0].localName === data[0].name){
         dom.desc.innerHTML = "uhhh it's already english?"
     }
-
 }

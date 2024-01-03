@@ -11,7 +11,9 @@
 
 <body>
 
-  <input type="text" class="input">
+  <label for="country code input">enter country code</label>
+  <input type="text" id="country code input" class="input">
+  
   <button class="b">toay holiday?</button>
   <button class="n">nearest holiday</button>
   <button class="w"> next public holidays Ww</button>
@@ -21,7 +23,7 @@
 
   <div class="calender">
     <header class="calenderHead">
-      <p class="monthyear"></p>
+      <h2 class="monthyear"></h2>
       <div class="navigation">
         <span class="left"><i class="fa-solid fa-chevron-left"></i></span>
         <span class="right"><i class="fa-solid fa-chevron-right"></i></span>
@@ -44,11 +46,11 @@
   </div>
 
   <div class="three-d-card">
-    <div class="card-wrapper">
+    <div id="card-wrapper">
       <div class="card-face front">
         <div class="card-content">
           <div class="card-title"></div>
-          <div class="card-description">hover for translation</div>
+          <div class="card-description">Click for translation</div>
         </div>
       </div>
       <div class="card-face back">
@@ -58,9 +60,10 @@
         </div>
       </div>
     </div>
+    
   </div>
 
-
+  
 
   <script type="module" src="./js/main.js"></script>
 

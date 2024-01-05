@@ -1,10 +1,10 @@
 .three-d-card {
-  position: relative;
+  position: absolute;
   width: 20rem;
   height: 13.3rem;
   perspective: 1000px;
   left: 65vw;
-  top: 15vh;
+  top: 30vh;
 }
 
 #card-wrapper {
@@ -64,10 +64,9 @@ color: white;
 
 .card-description {
   font-size: 16px;
+  margin-bottom: -3rem;
 }
 
-.card-descriptionB {
-  font-size: 16px;
-}
+
 
 

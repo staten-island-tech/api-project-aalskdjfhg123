@@ -13,3 +13,44 @@ body{
     background-color: rgb(48, 48, 48);
     color: white;
 }
+
+.search-config{
+    margin-top: 5.5rem;
+    margin-left: 3rem;
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.input{
+    margin-top: .5rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+#codetext{
+    font-size: 1.25rem;
+}
+
+.code-input{
+margin-bottom: 2rem;
+}
+
+.choices{
+    margin-top: 1rem
+}
+
+.b{
+    border-radius: .25rem;
+    background-color: #414181;
+    color: white;
+    border: solid #414181;
+}
+.b:hover{
+    cursor: pointer;
+}
+.b:active{
+    transform: scale(1.02);
+}
+

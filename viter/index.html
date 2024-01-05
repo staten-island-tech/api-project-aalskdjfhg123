@@ -13,31 +13,38 @@
 </head>
 
 <body>
-
-  <label for="country code input">enter country code</label>
+<div class="search-config">
+  <div class="code-input"> 
+  <h1>Search Configuration</h1>
+  <label for="country code input" id="codetext">Enter country code</label>
+  <br>
   <input type="text" id="country code input" class="input">
+  <br>
+</div>
 
-  <button class="b">search for holiday</button>
-
-  how many holidays ahead?
+  How many holidays ahead?
   <div class="choices">
-    <form>
+    <form class="radio-buttons">
       <label>
         <input type="radio" name="radio" checked="" id="one">
-        <span>1</span>
+        <span>Nearest holiday</span>
       </label>
       <label>
         <input type="radio" name="radio" id="two">
-        <span>2</span>
+        <span>1</span>
       </label>
       <label>
         <input type="radio" name="radio" id="three">
+        <span>2</span>
+      </label>
+      <label>
+        <input type="radio" name="radio" id="four">
         <span>3</span>
       </label>
     </form>
   </div>
-  <h1></h1>
-
+  <button class="b">Search for holiday</button>
+</div>
 
 
   <div class="calender">
@@ -68,8 +75,8 @@
     <div id="card-wrapper">
       <div class="card-face front">
         <div class="card-content">
-          <div class="card-title"></div>
-          <div class="card-description">Click for translation</div>
+          <div class="card-title">President's day</div>
+          <div class="card-description"></div>
         </div>
       </div>
       <div class="card-face back">

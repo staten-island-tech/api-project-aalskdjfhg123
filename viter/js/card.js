@@ -6,7 +6,8 @@ export async function card() {
     let input = document.querySelector('.input')
     const slop = await fetch(`https://date.nager.at/api/v3/NextPublicHolidays/${input.value}`)
     const data = await slop.json()
-    dom.desc.innerHTML = ""
+    dom.desc.innerHTML = `${data[choice].date}
+    <p>Click for translation</p>`
     dom.cardTitleL.innerHTML = data[choice].localName
     dom.cardTitleT.innerHTML = data[choice].name
 }

@@ -3,8 +3,8 @@
   width: 20rem;
   height: 13.3rem;
   perspective: 1000px;
-  left: 60vw;
-  top: 30vh;
+  left: 65vw;
+  top: 15vh;
 }
 
 #card-wrapper {
@@ -12,6 +12,7 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  
 }
 
 #card-wrapper.click{
@@ -28,9 +29,12 @@
   justify-content: center;
   border: 2px solid #3498db;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: #0C0A20;
 }
 
+.card-face.back{
+  border: 2px solid #34db66;
+}
 .card-face.front {
   transform: rotateY(0deg);
 }
@@ -41,7 +45,7 @@
 
 .card-content {
   text-align: center;
-  color: #333;
+color: white;
 }
 
 .card-title {

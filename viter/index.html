@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +16,26 @@
 
   <label for="country code input">enter country code</label>
   <input type="text" id="country code input" class="input">
-  
-  <button class="b">toay holiday?</button>
-  <button class="n">nearest holiday</button>
-  <button class="w"> next public holidays Ww</button>
+
+  <button class="b">search for holiday</button>
+
+  how many holidays ahead?
+  <div class="choices">
+    <form>
+      <label>
+        <input type="radio" name="radio" checked="" id="one">
+        <span>1</span>
+      </label>
+      <label>
+        <input type="radio" name="radio" id="two">
+        <span>2</span>
+      </label>
+      <label>
+        <input type="radio" name="radio" id="three">
+        <span>3</span>
+      </label>
+    </form>
+  </div>
   <h1></h1>
 
 
@@ -60,10 +79,10 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 
-  
+
 
   <script type="module" src="./js/main.js"></script>
 

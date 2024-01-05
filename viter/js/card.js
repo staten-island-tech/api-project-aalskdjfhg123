@@ -1,3 +1,4 @@
+import { choice } from "./buttons"
 import { dom } from "./dom"
 
 export async function card() {
@@ -6,9 +7,16 @@ export async function card() {
     const slop = await fetch(`https://date.nager.at/api/v3/NextPublicHolidays/${input.value}`)
     const data = await slop.json()
     dom.desc.innerHTML = ""
-    dom.cardTitleL.innerHTML = data[0].localName
-    dom.cardTitleT.innerHTML = data[0].name
-    if(data[0].localName === data[0].name){
-        dom.desc.innerHTML = "uhhh it's already english?"
-    }
+    dom.cardTitleL.innerHTML = data[choice].localName
+    dom.cardTitleT.innerHTML = data[choice].name
+}
+
+export function cardFlip(card){
+    card.addEventListener("click", function () {
+        if (card.classList != "click") {
+            card.classList.add("click")
+        } else {
+            card.classList.remove("click")
+        }
+    })
 }

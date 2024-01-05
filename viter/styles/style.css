@@ -1,7 +1,15 @@
 @import url(calender.css);
 @import url(card.css);
+@import url(buttons.css);
+
 html,
 body,
 *{
     font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: rgb(48, 48, 48);
+    color: white;
 }

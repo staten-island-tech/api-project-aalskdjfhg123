@@ -7,7 +7,7 @@
     width: 30%;
     position: absolute;
     top: 12vh;
-    left: 20vw;
+    left: 25vw;
 
 }
 
@@ -102,7 +102,7 @@ li {
 }
 
 #yes::before{
-    background-color: #40BDFF;
+    background-color: #34db66;
 }
 
 #yes{

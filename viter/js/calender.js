@@ -85,7 +85,7 @@ try {
 
 
 } catch (error) {
-    document.querySelector("h1").textContent = "bad code idiot"
+    alert("You either put the code wrong or the api doesn't have data for that country")
 }
 
    
